@@ -1,0 +1,6 @@
+Experiment with a dropout of 0.3 and the end result is better accuracy than a dropout of 0.1. Note that the dropout is quite sensitive, with a difference of 0.2 (0.3-0.1) there is a noticeable difference in the results.
+Test with a pool size of 2x2 and another of 6x6, and verify that the smallest size gives better results, as the size increases, the accuracy decreases considerably.
+Using a 2x2 filter kernel size, the results were very bad, whereas a 3x3 kernel improved accuracy considerably, a 4x4 kernel gives almost the same result as a 3x3 kernel, with the difference that
+the 4x4 kernel reaches better accuracy at an earlier time, in the remaining epochs it remains with almost the same accuracy. As the kernel size continues to increase, the accuracy begins to decrease little by little.
+With 3 convolution layers and 3 pooling layers, the results were better than using 1 convolution layer and 1 pooling layer, although the processing time was considerably longer.
+A 1024 size hidden layer gives better results than a 128 size hidden layer, but the time to process all 10 epochs increases considerably.
